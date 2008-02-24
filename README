@@ -1,7 +1,7 @@
 Better Code Highlighter Macro and Helper For Mephisto
 -----------------------------------------------------
 
-A small plugin that provides a filter to wrap code that will then be picked up by dp.SyntaxHighlighter(http://code.google.com/p/syntaxhighlighter/) for client side highlighting and one Liquid Helper to add required stylesheets/javascripts into your layout.
+A small plugin that provides a filter to wrap code that will then be picked up by dp.SyntaxHighlighter(http://code.google.com/p/syntaxhighlighter/) for client side highlighting and one Liquid filter to add required stylesheets/javascripts into your layout.
 
 The suggestion sent by mhavila(http://www.mhavila.com/syntax_test.html) to make the syntax be an valid strict html are been used. See this link for details:
 http://code.google.com/p/syntaxhighlighter/issues/detail?id=25
@@ -9,7 +9,7 @@ http://code.google.com/p/syntaxhighlighter/issues/detail?id=25
 Usage
 -----
 
-Ensure the assets were copied to public folder. After this, add the code_highlighter helper into your layout. For one language support use:
+Ensure the assets were copied to your public folder. After this, add the code_highlighter helper into your layout. For one language support use:
 
   {{ 'ruby' | code_highlighter }}
   
@@ -30,6 +30,11 @@ Then in your posts do:
 <filter:jscode lang="javascript">
   document.someScriptThing = "BOO"
 </filter:jscode>
+
+Misc
+----
+
+English is not my native language, so if you find any grammatical error let me know.
 
 Credits
 -------
