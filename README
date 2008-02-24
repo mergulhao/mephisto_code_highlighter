@@ -1,0 +1,44 @@
+Better Code Highlighter Macro and Helper For Mephisto
+-----------------------------------------------------
+
+A small plugin that provides a filter to wrap code that will then be picked up by dp.SyntaxHighlighter(http://code.google.com/p/syntaxhighlighter/) for client side highlighting and one Liquid Helper to add required stylesheets/javascripts into your layout.
+
+The suggestion sent by mhavila(http://www.mhavila.com/syntax_test.html) to make the syntax be an valid strict html are been used. See this link for details:
+http://code.google.com/p/syntaxhighlighter/issues/detail?id=25
+
+Usage
+-----
+
+Ensure the assets were copied to public folder. After this, add the code_highlighter helper into your layout. For one language support use:
+
+  {{ 'ruby' | code_highlighter }}
+  
+For two languages support use:
+  
+  {{ 'ruby' | code_highlighter: 'java' }}
+  
+For three or more languages, use:
+
+  {{ 'ruby' | code_highlighter: 'java', 'cpp' }}
+
+And so on. I know it's ugly, but I don't know another way to send multiple arguments to a Liquid filter. If you know, please tell me how!
+
+Valid languages are: cpp, csharp, css, delphi, java, javascript, php, python, ruby, sql, vb and xml.
+
+Then in your posts do:
+
+<filter:jscode lang="javascript">
+  document.someScriptThing = "BOO"
+</filter:jscode>
+
+Credits
+-------
+
+Originally written by Dan Webb(dan@danwebb.net).
+The original version can be found here:
+http://svn.danwebb.net/external/rails/plugins/filtered_column_code_highlighter/trunk/
+
+dp.SyntaxHighlighter is included in this package, but have it's own license, for datails see: http://code.google.com/p/syntaxhighlighter/
+
+(C) Sylvestre Mergulhao 2008 (contato@mergulhao.info)
+(C) Dan Webb 2006 (dan@danwebb.net) Licensed under a MIT Licence.
